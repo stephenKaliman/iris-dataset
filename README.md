@@ -14,6 +14,7 @@ has errors in the sepal width and petal length of entry 38 (noted in the UCI arc
 
 - [Configuration](#configuration)
 - [Data Overview](#data-overview)
+- [Modeling](#modeling)
 
 ## Configuration
 This project was done entirely in python, using the following versions and libraries:
