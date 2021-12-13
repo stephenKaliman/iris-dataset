@@ -32,8 +32,9 @@ def load_data():
     dataset.loc[34,'petal-width'] = 0.2
     dataset.loc[37,'sepal-width'] = 3.6
     dataset.loc[37,'petal-length'] = 1.4
+    return dataset
 
-def process_data():
+def process_data(dataset):
     # shape
     print('Shape: '+str(dataset.shape)+"\n")
 
@@ -48,5 +49,5 @@ def process_data():
     print(dataset.groupby('class').size())
 
 if __name__ == '__main__':
-    load_data()
-    process_data()
+    dataset = load_data()
+    process_data(dataset)
