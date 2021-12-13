@@ -112,7 +112,8 @@ SVM: 0.981319 (0.037477)
 ```
 And boxplots to give a more detailed overview of the performance of each model:
 <img src = "https://github.com/stephenKaliman/iris-dataset/blob/main/figures/comparison.png">
-Note that results vary trial to trial due to the use of random divisions to create the k-fold analysis, but these results are fairly representative of multiple trials.
+
+Note that results vary trial-to-trial due to the use of random divisions to create the k-fold analysis, but these results are fairly representative of multiple trials.
 
 The label for each of these is the model (see above). The first number is the average performance (average # correct out of 12 across multiple k-fold cross validations) and the second is the standard deviation. As we can see, the model that seems to have performed  best on this data is support vector machines, with an average accuraccy of 98% and a standard deviation of about 3.7%. The standard deviation isn't great, but it's the lowest we have, and the average is the highest we have. So only using this small data set and this naive set of algorithms and fairly basic testing schema, this seems like the best we can go, so for the time being, we'll go on ahead with it.
 
