@@ -112,4 +112,19 @@ SVM: 0.981597 (0.037150)
 ```
 The label for each of these is the model (see above). The first number is the average performance (average # correct out of 12 across multiple k-fold cross validations) and the second is the standard deviation. As we can see, the model that seems to have performed  best on this data is support vector machines, with an average accuraccy of 98% and a standard deviation of about 3.7%. The standard deviation isn't great, but it's the lowest we have, and the average is the highest we have. So only using this small data set and this naive set of algorithms and fairly basic testing schema, this seems like the best we can go, so for the time being, we'll go on ahead with it.
 
+#### Support Vector Machines
+Since we are using SVM, we might as well know the basic idea of what it is. In general, it's a popular classification method used in machine learning. Think of any instance of the problem we are trying to solve in terms of the attributes we are using to classify it, in the following way:
+
+We can imagine each instance of the problem as a point plotted in some n-dimensional space, where n is the number of attributes, and the coordinates of the point are the values of the attribute. Then, we can "color" each instance in the space based on its true classification. 
+
+Now, with this in mind, if we want to classify these points, we might want to divide the space up so that different classifications fall in different divisions, so that when we get new data or attempt to classify new data, we can see pretty quickly and easily what classification it most likely will fall into, simply based on how we have divided up the plane. 
+
+SVM does this, and in particular, it picks divisions to maximize the distance from the nearest point in the training set. In doing so, we create a fitting division of the data into separate classifications, and also leave the biggest possible margin of error for any data we might have to classify later, to maximize the probability that we classify it correctly.
+
+As you can see in the images below (credits to [Rohith Gandhi](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)), any of the green lines on the left properly divide the data into categories, but the one on the right gives the largest margin of error for any instances we might encounter when actually using the data later on.
+
+<img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/0_9jEWNXTAao7phK-5.png"><img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/0_0o8xIA4k3gXUDCFU.png">
+
+### Predicting
+
 
