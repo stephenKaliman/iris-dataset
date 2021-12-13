@@ -29,9 +29,9 @@ def load_data():
     dataset = read_csv(url, names=names)
 
     # Fix known errors
-    dataset.loc[34,'petal-width'] = 
-    dataset.loc[37,'sepal-width'] = 
-    dataset.loc[37,'petal-length'] = 
+    dataset.loc[34,'petal-width'] = 0.2
+    dataset.loc[37,'sepal-width'] = 3.6
+    dataset.loc[37,'petal-length'] = 1.4
 
 def process_data():
     # shape
