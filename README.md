@@ -130,7 +130,7 @@ As you can see in the images below (credits to [Rohith Gandhi](https://towardsda
 
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/0_9jEWNXTAao7phK-5.png"><img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/0_0o8xIA4k3gXUDCFU.png">
 
-Now, of course, leaving the biggest possible margin of error might not always work-- for example, if one of the classes is very well-represented in the data set, then cases we encounter later on will probably not be outliers relative to our data set, while other classes might cross over the "maximum-margin-of-error" division and be incorrectly classified by an SVM model.
+Now, of course, leaving the biggest possible margin of error might not always work-- for example, if one of the classes is very well-represented in the data set, then cases we encounter later on will probably not be outliers relative to our data set, while other classes might cross over the "maximum-margin-of-error" division and be incorrectly classified by an SVM model. However, it appears that SVM works quite well for our particular case.
 
 ### Predicting
 
