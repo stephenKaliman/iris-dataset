@@ -87,3 +87,11 @@ histograms of individual attributes, to see shape and more detailed distribution
 scatter plots of attributes (in pairs) to see how they correlate to one another. This may help to give an idea of what we might be able to do with the data:
 
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/scatter.png">
+
+## Modeling
+Now, we have to move away from the data science/statistics and towards the machine learning.
+In order to actually accomplish anything to that effect, we have to pick an algorithm/model to use.
+The pool I chose from was a set of 6 common algorithms: Logistic Regression, Linear Discriminant Analysis,
+K-Nearest Neighbors, Classiciation and Regression Trees, Gaussian Naive Bayes, and Support Vector Machines.
+### Testing
+I used stratified k-fold cross validation to 
