@@ -5,6 +5,8 @@ import matplotlib
 import pandas
 import sklearn
 
+import data_setup
+
 from pandas import read_csv
 from pandas.plotting import scatter_matrix
 from matplotlib import pyplot
@@ -25,15 +27,20 @@ url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
 
+def box_and_whisker(dataset):
+    dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+    pyplot.show()
 
-# box and whisker plots
-dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+def histograms(dataset):
+    dataset.hist()
+    pyplot.show()
 
+def scatter_plots(dataset):
+    scatter_matrix(dataset)
+    pyplot.show()
 
-# histograms
-dataset.hist()
-
-
-# scatter plot matrix
-scatter_matrix(dataset)
-pyplot.show()
+if __name__=='__main__':
+    dataset = data_setup.load_data()
+    box_and_whisker(dataset)
+    histograms(dataset)
+    scatter_plots(dataset)
