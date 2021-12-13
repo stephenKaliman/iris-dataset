@@ -75,6 +75,7 @@ dtype: int64
 Of course, it helps to visualize the data as well, so my `data_visualization.py` creates
 box-and-whisker plots, histograms, and a scatter plot matrix to help understand the data
 more visually.
+
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/box-and-whisker.png">
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/histogram.png">
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/scatter.png">
