@@ -77,5 +77,13 @@ box-and-whisker plots, histograms, and a scatter plot matrix to help understand 
 more visually.
 
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/box-and-whisker.png">
+
+box plots of individual attributes, to see general layout and outliers.
+
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/histogram.png">
+
+histograms of individual attributes, to see shape and more detailed distribution.
+
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/scatter.png">
+
+scatter plots of attributes (in pairs) to see how they correlate to one another. This may help to give an idea of what we might be able to do with the data.
