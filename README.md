@@ -4,6 +4,8 @@ This project uses the well-known Fisher iris classification dataset (found [here
 The dataset was used to train a machine learning model to determine the class of irises (Iris Setosa, Versicolour, or Virginica) 
 based on 4 attributes: sepal length, sepal width, petal length, and petal width; all measured in cm.
 
+I used a k-fold cross validation method to choose the SVM model for this particular project. I trained it on 80% of the given data, and tested it on the other 20%, where it performed with 97% accuracy!
+
 As noted in the UCI archive, one of the classes can be distinguished linearly from the other two, but the other two cannot be
 linearly distinguished from one another. 
 
@@ -133,7 +135,8 @@ As you can see in the images below (credits to [Rohith Gandhi](https://towardsda
 Now, of course, leaving the biggest possible margin of error might not always work-- for example, if one of the classes is very well-represented in the data set, then cases we encounter later on will probably not be outliers relative to our data set, while other classes might cross over the "maximum-margin-of-error" division and be incorrectly classified by an SVM model. However, it appears that SVM works quite well for our particular case.
 
 ### Predicting
-Finally, we have to use our model to make predictions. We used the SVM algorithm, which we decided on in the previous step. We split the data into training and validation parts (80% for training, 20% for validation) since it is already quite small and we don't have extra data readily available. Here are the results:
+Finally, we have to use our model to make predictions. We used the SVM algorithm, which we decided on in the previous step. We split the data into training and validation parts (80% for training, 20% for validation) since it is already quite small and we don't have extra data readily available. 
+#### Results
 ```
 0.9666666666666667
 [[11  0  0]
