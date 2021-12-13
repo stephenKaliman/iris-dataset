@@ -91,7 +91,24 @@ scatter plots of attributes (in pairs) to see how they correlate to one another.
 ## Modeling
 Now, we have to move away from the data science/statistics and towards the machine learning.
 In order to actually accomplish anything to that effect, we have to pick an algorithm/model to use.
-The pool I chose from was a set of 6 common algorithms: Logistic Regression, Linear Discriminant Analysis,
-K-Nearest Neighbors, Classiciation and Regression Trees, Gaussian Naive Bayes, and Support Vector Machines.
+The pool I chose from was a set of 6 common algorithms: Logistic Regression (LR), Linear Discriminant Analysis (LDA),
+K-Nearest Neighbors (KNN), Classiciation and Regression Trees (CART), Gaussian Naive Bayes (GNB), and Support Vector Machines (SVM).
 ### Testing
-I used stratified k-fold cross validation to 
+I used stratified k-fold cross validation to test each of these models on the data set.
+K-fold cross validation involves splitting the test data into k parts, training on k-1
+of these, and testing on the remaining part. This is repeated k times, with each part being
+the test part for one of the times. I used a k-value of 10, since this number (apparently) tends to give
+consistently reliable results for validation in predicting how the model will hold up in general, based on the given data.
+
+I also did the k-fold validation multiple times with multiple splits in the data to get the following results:
+```
+LR: 0.949167 (0.058998)
+LDA: 0.976528 (0.041023)
+KNN: 0.955417 (0.054779)
+CART: 0.947986 (0.060929)
+NB: 0.950069 (0.060486)
+SVM: 0.981597 (0.037150)
+```
+The label for each of these is the model (see above). The first number is the average performance (average # correct out of 12 across multiple k-fold cross validations) and the second is the standard deviation. As we can see, the model that seems to have performed  best on this data is support vector machines, with an average accuraccy of 98% and a standard deviation of about 3.7%. The standard deviation isn't great, but it's the lowest we have, and the average is the highest we have. So only using this small data set and this naive set of algorithms and fairly basic testing schema, this seems like the best we can go, so for the time being, we'll go on ahead with it.
+
+
