@@ -11,3 +11,16 @@ The particular dataset has 150 entries, 50 of each class. As provided, the data 
 has errors in the sepal width and petal length of entry 38 (noted in the UCI archive link provided).
 
 ## Table of Contents
+
+- [Config](#config)
+
+## Configuration
+This project was done entirely in python, using the following versions and libraries:
+```
+Python: 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]
+scipy: 1.7.1
+numpy: 1.20.3
+matplotlib: 3.4.3
+pandas: 1.3.4
+sklearn: 0.24.2
+```
