@@ -46,12 +46,20 @@ def model_testing(dataset):
         cv_results = []
         for i in range(120):
             kfold = StratifiedKFold(n_splits=10, random_state=random.randint(0,2**31), shuffle=True)
-            cv_results.append(cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy'))
-            results.append(cv_results)
+            for res in cross_val_score(model, X_train, Y_train, cv=kfold, scoring='accuracy'):
+                cv_results.append(res)
         cv_results = numpy.asarray(cv_results)
+        results.append(cv_results)
         names.append(name)
         print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
+    return names, results
+
+def model_compare(names, results):
+    pyplot.boxplot(results, labels=names)
+    pyplot.title('Algorithm Comparison')
+    pyplot.show()
 
 if __name__ == '__main__':
     dataset = data_setup.load_data()
-    model_testing(dataset)
+    names, results = model_testing(dataset)
+    model_compare(names, results)
