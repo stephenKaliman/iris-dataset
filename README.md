@@ -1,6 +1,6 @@
 # IRIS DATASET
 
-This project uses the well-known Fisher Iris classification dataset (found [here](https://archive.ics.uci.edu/ml/datasets/Iris)).
+This project uses the well-known Fisher iris classification dataset (found [here](https://archive.ics.uci.edu/ml/datasets/Iris)).
 The dataset was used to train a machine learning model to determine the class of irises (Iris Setosa, Versicolour, or Virginica) 
 based on 4 attributes: sepal length, sepal width, petal length, and petal width; all measured in cm.
 
