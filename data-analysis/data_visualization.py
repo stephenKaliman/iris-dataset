@@ -1,7 +1,3 @@
-import sys
-import scipy
-import numpy
-import matplotlib
 import pandas
 import sklearn
 
@@ -22,10 +18,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
-
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = read_csv(url, names=names)
 
 def box_and_whisker(dataset):
     dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
