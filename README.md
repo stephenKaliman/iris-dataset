@@ -133,5 +133,37 @@ As you can see in the images below (credits to [Rohith Gandhi](https://towardsda
 Now, of course, leaving the biggest possible margin of error might not always work-- for example, if one of the classes is very well-represented in the data set, then cases we encounter later on will probably not be outliers relative to our data set, while other classes might cross over the "maximum-margin-of-error" division and be incorrectly classified by an SVM model. However, it appears that SVM works quite well for our particular case.
 
 ### Predicting
+Finally, we have to use our model to make predictions. We used the SVM algorithm, which we decided on in the previous step. We split the data into training and validation parts (80% for training, 20% for validation) since it is already quite small and we don't have extra data readily available. Here are the results:
+```
+0.9666666666666667
+[[11  0  0]
+ [ 0 12  1]
+ [ 0  0  6]]
+                 precision    recall  f1-score   support
 
+    Iris-setosa       1.00      1.00      1.00        11
+Iris-versicolor       1.00      0.92      0.96        13
+ Iris-virginica       0.86      1.00      0.92         6
+
+       accuracy                           0.97        30
+      macro avg       0.95      0.97      0.96        30
+   weighted avg       0.97      0.97      0.97        30
+```
+So we get an overall accuracy of about 97%, which is pretty good!
+
+## Improvements
+Of course, as this stands, it is a finished product in a sense, but it's not completely perfect. I certainly have some reservations about it as it stands, and some plans to improve into the future. This section (and the whole readme and project, but especially this section) is constantly being updated as I work on the project, fix things, and think of new things to improve.
+
+The data set is quite small, but I'm sure I can find more data elsewhere to expand it and have a better separation of training and validation sets, and have each set be larger for more thorough-ness. And besides improving the bare rigor of the project, it might certainly make this a bit more interesting for me (and maybe for you, too) overall if the training and validation sets are completely separate- i.e., they come from different sources, potentially causing more discrepancies in the data to make the whole thing feel a little less contrived and more real, giving me more interesting difficulties to work around.
+
+I noticed that when I changed the seed for the division into training and validation sets, the results from the model testing changed drastically. I plan to use this as an opportunity to explore using the other algorithms, and possibly add more algorithms to the set from which I am testing. But on top of that I feel like the true solution to the problem I see here is to look into better model/algorithm selection techniques.
+
+## References
+Inspired by, and loosely followed Jason Brownlee's [introductory example](https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
+
+Some extra information on [k-fold cross verification](https://machinelearningmastery.com/k-fold-cross-validation/)
+
+A basic overview of [SVM](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)
+
+And, of course, good old [Wikipedia](https://en.wikipedia.org/wiki/Support-vector_machine)
 
