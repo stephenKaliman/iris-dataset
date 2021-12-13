@@ -103,13 +103,17 @@ consistently reliable results for validation in predicting how the model will ho
 
 I also did the k-fold validation multiple times with multiple splits in the data to get the following results:
 ```
-LR: 0.949167 (0.058998)
-LDA: 0.976528 (0.041023)
-KNN: 0.955417 (0.054779)
-CART: 0.947986 (0.060929)
-NB: 0.950069 (0.060486)
-SVM: 0.981597 (0.037150)
+LR: 0.950278 (0.057774)
+LDA: 0.976944 (0.040408)
+KNN: 0.958472 (0.051930)
+CART: 0.949722 (0.063336)
+NB: 0.950000 (0.060381)
+SVM: 0.981319 (0.037477)
 ```
+And boxplots to give a more detailed overview of the performance of each model:
+<img src = "https://github.com/stephenKaliman/iris-dataset/blob/main/figures/comparison.png">
+Note that results vary trial to trial due to the use of random divisions to create the k-fold analysis, but these results are fairly representative of multiple trials.
+
 The label for each of these is the model (see above). The first number is the average performance (average # correct out of 12 across multiple k-fold cross validations) and the second is the standard deviation. As we can see, the model that seems to have performed  best on this data is support vector machines, with an average accuraccy of 98% and a standard deviation of about 3.7%. The standard deviation isn't great, but it's the lowest we have, and the average is the highest we have. So only using this small data set and this naive set of algorithms and fairly basic testing schema, this seems like the best we can go, so for the time being, we'll go on ahead with it.
 
 #### Support Vector Machines
@@ -124,6 +128,8 @@ SVM does this, and in particular, it picks divisions to maximize the distance fr
 As you can see in the images below (credits to [Rohith Gandhi](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)), any of the green lines on the left properly divide the data into categories, but the one on the right gives the largest margin of error for any instances we might encounter when actually using the data later on.
 
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/0_9jEWNXTAao7phK-5.png"><img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/0_0o8xIA4k3gXUDCFU.png">
+
+Now, of course, leaving the biggest possible margin of error might not always work-- for example, if one of the classes is very well-represented in the data set, then cases we encounter later on will probably not be outliers relative to our data set, while other classes might cross over the "maximum-margin-of-error" division and be incorrectly classified by an SVM model.
 
 ### Predicting
 
