@@ -76,14 +76,14 @@ Of course, it helps to visualize the data as well, so my `data_visualization.py`
 box-and-whisker plots, histograms, and a scatter plot matrix to help understand the data
 more visually.
 
+box plots of individual attributes, to see general layout and outliers:
+
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/box-and-whisker.png">
 
-box plots of individual attributes, to see general layout and outliers.
+histograms of individual attributes, to see shape and more detailed distribution:
 
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/histogram.png">
 
-histograms of individual attributes, to see shape and more detailed distribution.
+scatter plots of attributes (in pairs) to see how they correlate to one another. This may help to give an idea of what we might be able to do with the data:
 
 <img src="https://github.com/stephenKaliman/iris-dataset/blob/main/figures/scatter.png">
-
-scatter plots of attributes (in pairs) to see how they correlate to one another. This may help to give an idea of what we might be able to do with the data.
