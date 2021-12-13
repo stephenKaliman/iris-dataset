@@ -1,21 +1,9 @@
-# Python version
 import sys
-print('Python: {}'.format(sys.version))
-# scipy
 import scipy
-print('scipy: {}'.format(scipy.__version__))
-# numpy
 import numpy
-print('numpy: {}'.format(numpy.__version__))
-# matplotlib
 import matplotlib
-print('matplotlib: {}'.format(matplotlib.__version__))
-# pandas
 import pandas
-print('pandas: {}'.format(pandas.__version__))
-# scikit-learn
 import sklearn
-print('sklearn: {}'.format(sklearn.__version__))
 
 # Load libraries
 from pandas import read_csv
@@ -34,21 +22,31 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
-# Load dataset
-url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-dataset = read_csv(url, names=names)
+def load_data():
+    # Load dataset
+    url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+    names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+    dataset = read_csv(url, names=names)
 
-# shape
-print('Shape: '+str(dataset.shape)+"\n")
+    # Fix known errors
+    dataset.loc[34,'petal-width'] = 
+    dataset.loc[37,'sepal-width'] = 
+    dataset.loc[37,'petal-length'] = 
+
+def process_data():
+    # shape
+    print('Shape: '+str(dataset.shape)+"\n")
 
 
-# head -- peek at the data
-print("Sample Data:")
-print(dataset.head(20))
-print("\n")
+    # head -- peek at the data
+    print("Sample Data:")
+    print(dataset.head(20))
+    print("\n")
 
 
-# class distribution
+    # class distribution
+    print(dataset.groupby('class').size())
 
-print(dataset.groupby('class').size())
+if __name__ == '__main__':
+    load_data()
+    process_data()
