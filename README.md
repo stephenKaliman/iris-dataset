@@ -27,6 +27,7 @@ sklearn: 0.24.2
 ```
 
 ## Data Overview
+### Basic Information
 Before getting into the project, I took a look at the data overall, since it wouldn't be very easy to analyze it or have
 any ideas of what to do with it without having a general idea of how it looks. The following is the output from my 
 `data-setup.py` script. 
@@ -69,3 +70,8 @@ Iris-versicolor    50
 Iris-virginica     50
 dtype: int64
 ```
+
+### Visualization
+Of course, it helps to visualize the data as well, so my `data_visualization.py` creates
+box-and-whisker plots, histograms, and a scatter plot matrix to help understand the data
+more visually.
